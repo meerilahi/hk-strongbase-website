@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HK StrongBase Builders - Premier construction and infrastructure company specializing in government and public sector projects in Pakistan">
+    <meta name="keywords" content="construction, infrastructure, government projects, civil engineering, Pakistan, sewerage, drainage, roads">
+    <title>HK StrongBase Builders (SMC Private) Limited</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d7a3e;
+            --light-green: #4a9d5f;
+            --dark-green: #1e5a2e;
+            --accent-orange: #ff8c42;
+            --light-orange: #ffb380;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 2px;
+            padding: 5px;
+        }
+        .company-name {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-orange);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--light-orange);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--light-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        /* Certifications Banner */
+        .certifications-banner {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-top: 3px solid var(--accent-orange);
+        }
+
+        .cert-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cert-title {
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cert-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-orange);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Founder Section */
+        #founder {
+            background: var(--bg-light);
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .founder-image {
+            width: 100%;
+            max-width: 300px;
+            height: 350px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin: 0 auto;
+        }
+
+        .founder-info h3 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-info .title {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-info p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--accent-orange);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: var(--bg-light);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Compliance Section */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .compliance-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .compliance-card .icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .compliance-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .compliance-card ul {
+            text-align: left;
+            color: var(--text-light);
+            list-style-position: inside;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--bg-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-content p {
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-orange);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark-green);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="HK StrongBase Builders Logo" class="logo">
+                <div class="company-name">HK StrongBase Builders</div>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#founder">Leadership</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Building Pakistan's Infrastructure Excellence</h1>
+            <p class="tagline">Trusted Partner for Government & Public Sector Projects</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Request Proposal</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Banner -->
+    <div class="certifications-banner">
+        <div class="cert-container">
+            <div class="cert-title">Officially Registered & Certified</div>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-icon">✓</div>
+                    <span>SECP Registered</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">✓</div>
+                    <span>FBR Certified</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">✓</div>
+                    <span>KPRA Registered</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">✓</div>
+                    <span>PEC Approved</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">✓</div>
+                    <span>C&W Department KP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About HK StrongBase Builders</h2>
+            <p class="section-subtitle">HK StrongBase Builders (SMC Private) Limited</p>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <h3>Our Mission</h3>
+                    <p>To deliver exceptional infrastructure solutions for government and public sector projects through innovation, quality craftsmanship, and unwavering commitment to safety and compliance standards.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <h3>Our Vision</h3>
+                    <p>To be recognized as Pakistan's most trusted and reliable construction partner for government infrastructure development, setting benchmarks in quality, transparency, and timely project delivery.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <h3>Our Values</h3>
+                    <p>Integrity, Quality Excellence, Safety First, Transparency in Operations, Environmental Responsibility, and Commitment to Deadlines. We build not just structures, but lasting relationships with our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder">
+        <div class="container">
+            <h2 class="section-title">Leadership & Founder</h2>
+            <p class="section-subtitle">Guided by Experience, Driven by Excellence</p>
+            <div class="founder-content">
+                <div class="founder-image"><img src="ceo.jpg" alt="Hakeem Khan Image" class="founder-image"></div>
+                <div class="founder-info">
+                    <h3>Hakeem Khan</h3>
+                    <p class="title">Founder & Chief Executive Officer</p>
+                    <p>With extensive experience in civil construction and infrastructure development, Hakeem Khan founded HK StrongBase Builders with a vision to transform Pakistan's infrastructure landscape. His leadership has been instrumental in establishing the company as a trusted partner for government and public sector projects.</p>
+                    <p>Under his guidance, HK StrongBase Builders has successfully completed numerous projects in sewerage systems, drainage networks, road construction, and general civil engineering works, maintaining the highest standards of quality and compliance.</p>
+                    <p>Hakeem Khan's commitment to excellence, transparency, and timely delivery has earned the company recognition and trust among government departments and public sector organizations across Khyber Pakhtunkhwa and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive Infrastructure Solutions for Government Projects</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚰</div>
+                    <h3>Sewerage Systems</h3>
+                    <p>Design, installation, and maintenance of modern sewerage infrastructure including collection systems, treatment facilities, and disposal networks for municipal and government projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Drainage Systems</h3>
+                    <p>Comprehensive drainage solutions including storm water management, surface drainage, and subsurface drainage systems for urban and rural development projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛣️</div>
+                    <h3>Road Construction</h3>
+                    <p>Professional road construction services including highways, urban roads, rural access roads, and road rehabilitation projects meeting international quality standards.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌳</div>
+                    <h3>Roadside Development</h3>
+                    <p>Complete roadside infrastructure development including sidewalks, green belts, street lighting, signage, and beautification for enhanced public spaces.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⛏️</div>
+                    <h3>Earthworks</h3>
+                    <p>Expert earthwork services including excavation, grading, leveling, compaction, and soil stabilization for large-scale infrastructure and development projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>General Civil Construction</h3>
+                    <p>Full-spectrum civil engineering and construction services for public buildings, bridges, retaining structures, and other government infrastructure requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects Portfolio</h2>
+            <p class="section-subtitle">Delivering Excellence Across Pakistan</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🏗️</div>
+                    <div class="project-info">
+                        <h3>Municipal Sewerage Project</h3>
+                        <p>Comprehensive sewerage system installation for urban development, serving over 50,000 residents with modern waste management infrastructure.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🛣️</div>
+                    <div class="project-info">
+                        <h3>Highway Development</h3>
+                        <p>Construction of 15km highway section including proper drainage systems, road safety features, and quality surfacing materials.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">💧</div>
+                    <div class="project-info">
+                        <h3>Storm Water Drainage</h3>
+                        <p>Large-scale storm water management system for urban flood prevention, featuring modern drainage channels and retention systems.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🌆</div>
+                    <div class="project-info">
+                        <h3>Urban Road Network</h3>
+                        <p>Complete urban road infrastructure development including main roads, service lanes, footpaths, and street beautification.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🏞️</div>
+                    <div class="project-info">
+                        <h3>Earthwork & Leveling</h3>
+                        <p>Major earthwork project for government land development, involving excavation, grading, and site preparation for future construction.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🌉</div>
+                    <div class="project-info">
+                        <h3>Bridge & Culvert Works</h3>
+                        <p>Construction of reinforced concrete bridges and culverts for improved connectivity and water flow management in rural areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section id="compliance">
+        <div class="container">
+            <h2 class="section-title">Government Compliance & Capabilities</h2>
+            <p class="section-subtitle">Fully Compliant with All Regulatory Requirements</p>
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <div class="icon">📋</div>
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>SECP Registration</li>
+                        <li>FBR Tax Compliance</li>
+                        <li>KPRA Registration</li>
+                        <li>PEC Approval</li>
+                        <li>C&W Department KP</li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="icon">⚖️</div>
+                    <h3>Legal Compliance</h3>
+                    <ul>
+                        <li>Full legal documentation</li>
+                        <li>Tax filing compliance</li>
+                        <li>Labor law adherence</li>
+                        <li>Safety regulations</li>
+                        <li>Environmental standards</li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="icon">🎯</div>
+                    <h3>Quality Standards</h3>
+                    <ul>
+                        <li>International quality benchmarks</li>
+                        <li>Material testing protocols</li>
+                        <li>Project monitoring systems</li>
+                        <li>Quality assurance programs</li>
+                        <li>Performance guarantees</li>
+                    </ul>
+                </div>
+                <div class="compliance-card">
+                    <div class="icon">💼</div>
+                    <h3>Tender Capabilities</h3>
+                    <ul>
+                        <li>Government tender experience</li>
+                        <li>Financial capacity verified</li>
+                        <li>Technical expertise proven</li>
+                        <li>Timely project delivery record</li>
+                        <li>Transparent operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in Touch for Your Next Project</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Company Information</h3>
+                    <div class="contact-item">
+                        <div class="icon">🏢</div>
+                        <div class="contact-item-content">
+                            <h4>Company Name</h4>
+                            <p>HK StrongBase Builders (SMC Private) Limited</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">👤</div>
+                        <div class="contact-item-content">
+                            <h4>Founder & CEO</h4>
+                            <p>Hakeem Khan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📧</div>
+                        <div class="contact-item-content">
+                            <h4>Email Address</h4>
+                            <p>hkstrongbasebuilders@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📱</div>
+                        <div class="contact-item-content">
+                            <h4>Contact Numbers</h4>
+                            <p>0317-9533220<br>0344-9039300</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div class="contact-item-content">
+                            <h4>Office Address</h4>
+                            <p>Zaryab Colony, Faqeer Abad,<br>Peshawar, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Send Us a Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HK StrongBase Builders</h3>
+                <p>Building Pakistan's infrastructure with excellence, integrity, and innovation.</p>
+                <p style="margin-top: 1rem;">Trusted partner for government and public sector projects.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#founder">Leadership</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#compliance">Compliance</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#services">Sewerage Systems</a>
+                <a href="#services">Drainage Systems</a>
+                <a href="#services">Road Construction</a>
+                <a href="#services">Roadside Development</a>
+                <a href="#services">Earthworks</a>
+                <a href="#services">Civil Construction</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>📧 hkstrongbasebuilders@gmail.com</p>
+                <p>📱 0317-9533220</p>
+                <p>📱 0344-9039300</p>
+                <p>📍 Zaryab Colony, Faqeer Abad, Peshawar, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HK StrongBase Builders (SMC Private) Limited. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">SECP Registered | FBR Certified | KPRA Registered | PEC Approved | C&W Department KP</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will contact you shortly.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const menu = document.getElementById('navMenu');
+                    menu.classList.remove('active');
+                }
+            });
+        });
+
+        // Fade in elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.about-card, .service-card, .project-card, .compliance-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+                
